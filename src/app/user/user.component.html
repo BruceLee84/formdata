@@ -1,0 +1,59 @@
+
+<!-- <div *ngFor="let p of userData; index as i">
+    <p>Username: {{p['userName']}}</p>
+   
+</div> -->
+
+
+<form>
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-8 col-lg-6">
+        <!-- Section Heading-->
+        <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+          <h3>User <span> Details</span></h3>
+          <!-- <p>Appland is completely creative, lightweight, clean &amp; super responsive app landing page.</p> -->
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Single Advisor-->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+          <!-- Team Thumb-->
+          <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+            <!-- Social Info-->
+            <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+          </div>
+          <!-- Team Details-->
+          <div class="single_advisor_details_info" *ngFor="let p of userData; index as i">
+            <h6 >Username: {{p['userName']}}</h6>
+            <h6 class="designation">Role: {{p['role']}}</h6>
+          </div>
+          <br><br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" (click)="getUser()">GetUsers</button><br><br>
+
+</form>
+
+<section style="background-color: #eee;">
+  <div class="text-center container py-5">
+    <h4 class="mt-4 mb-5"><strong>Bestsellers</strong></h4>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col" *ngFor="let u of  allUser">
+      <div class="card">
+        <!-- <img src={{data.image}} class="card-img-top"> -->
+        <div class="card-body">
+          <h5 class="card-title">{{u.userName}}</h5>
+          <h6 class="mb-3">{{u.role}}</h6>
+          <!-- <button type="button" class="btn btn-primary" (click)="addtocart(data)">Add to cart</button> -->
+        </div>
+      </div>
+    </div>
+</div>
+</div></section>
+<button class="btn btn-primary" (click)="getAllUser()">GetUsers</button>
